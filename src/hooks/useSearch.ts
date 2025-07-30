@@ -13,7 +13,7 @@ interface SearchResult {
 export const useSearch = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // ✅ دالة لتوحيد الحروف وإزالة المسافات وتوحيد الكيس
+  // ⚙️ دالة لتوحيد النصوص قبل المقارنة
   const normalize = (text: string) =>
     text.toLowerCase().trim().normalize('NFKC');
 
@@ -33,11 +33,11 @@ export const useSearch = () => {
       ) {
         results.push({
           type: 'department',
-          department: dept
+          department: dept,
         });
       }
 
-      // 🔍 البحث في المواد داخل القسم
+      // 🔍 البحث في المواد الدراسية داخل القسم
       dept.semesters.forEach(semester => {
         semester.terms.forEach(term => {
           term.subjects.forEach(subject => {
@@ -50,7 +50,7 @@ export const useSearch = () => {
                 department: dept,
                 subject,
                 semester: semester.name,
-                term: term.name
+                term: term.name,
               });
             }
           });
@@ -58,12 +58,12 @@ export const useSearch = () => {
       });
     });
 
-    return results.slice(0, 10); // تحديد عدد النتائج
+    return results.slice(0, 20); // عرض أول 20 نتيجة فقط
   }, [searchQuery]);
 
   return {
     searchQuery,
     setSearchQuery,
-    searchResults
+    searchResults,
   };
 };

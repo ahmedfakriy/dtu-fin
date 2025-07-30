@@ -120,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) =
                 </div>
                 <div className="flex items-center space-x-2">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/ahmedfikryfauz?locale=ar_AR"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) =
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/ahmed_fekry_fauz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-pink-600 hover:bg-pink-50 rounded-lg"

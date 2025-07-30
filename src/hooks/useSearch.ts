@@ -13,30 +13,38 @@ interface SearchResult {
 export const useSearch = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
+  // ✅ دالة لتوحيد الحروف وإزالة المسافات وتوحيد الكيس
+  const normalize = (text: string) =>
+    text.toLowerCase().trim().normalize('NFKC');
+
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
 
     const results: SearchResult[] = [];
-    const query = searchQuery.toLowerCase();
+    const query = normalize(searchQuery);
 
     departments.forEach(dept => {
-      // Search in department names
-      if (dept.name.toLowerCase().includes(query) || 
-          dept.nameAr.includes(query) ||
-          dept.description.toLowerCase().includes(query) ||
-          dept.descriptionAr.includes(query)) {
+      // 🔍 البحث في بيانات القسم
+      if (
+        normalize(dept.name).includes(query) ||
+        normalize(dept.nameAr).includes(query) ||
+        normalize(dept.description).includes(query) ||
+        normalize(dept.descriptionAr).includes(query)
+      ) {
         results.push({
           type: 'department',
           department: dept
         });
       }
 
-      // Search in subjects
+      // 🔍 البحث في المواد داخل القسم
       dept.semesters.forEach(semester => {
         semester.terms.forEach(term => {
           term.subjects.forEach(subject => {
-            if (subject.name.toLowerCase().includes(query) || 
-                subject.nameAr.includes(query)) {
+            if (
+              normalize(subject.name).includes(query) ||
+              normalize(subject.nameAr).includes(query)
+            ) {
               results.push({
                 type: 'subject',
                 department: dept,
@@ -50,7 +58,7 @@ export const useSearch = () => {
       });
     });
 
-    return results.slice(0, 10); // Limit results
+    return results.slice(0, 10); // تحديد عدد النتائج
   }, [searchQuery]);
 
   return {

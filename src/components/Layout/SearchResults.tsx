@@ -11,7 +11,11 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ searchQuery }) => 
   const { searchResults } = useSearch();
 
   if (!searchQuery.trim() || searchResults.length === 0) {
-    return null;
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-gray-500 text-lg" dir="rtl">
+        لا توجد نتائج مطابقة للبحث عن "{searchQuery}"
+      </div>
+    );
   }
 
   return (
@@ -20,7 +24,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ searchQuery }) => 
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-right">
           نتائج البحث عن "{searchQuery}"
         </h2>
-        
+
         <div className="space-y-6">
           {searchResults.map((result, index) => (
             <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
@@ -32,9 +36,9 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ searchQuery }) => 
                     </div>
                     <div className="text-right flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {result.department.name}
+                        {result.department.nameAr || result.department.name}
                       </h3>
-                      <p className="text-gray-600">{result.department.description}</p>
+                      <p className="text-gray-600">{result.department.descriptionAr || result.department.description}</p>
                     </div>
                   </div>
                 </Link>
@@ -51,10 +55,10 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ searchQuery }) => 
                   </a>
                   <div className="text-right">
                     <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      {result.subject?.name}
+                      {result.subject?.nameAr || result.subject?.name}
                     </h3>
                     <p className="text-gray-600">
-                      {result.department.name} • {result.semester} • {result.term}
+                      {result.department.nameAr || result.department.name} • {result.semester} • {result.term}
                     </p>
                   </div>
                 </div>

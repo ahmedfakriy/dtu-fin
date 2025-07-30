@@ -31,7 +31,7 @@ function App() {
           onSearchChange={setSearchQuery}
           searchQuery={searchQuery}
         />
-        
+
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -78,8 +78,7 @@ function App() {
                   </div>
                   <div className="flex items-center justify-center md:justify-start space-x-3 space-x-reverse">
                     <Mail className="w-5 h-5 text-blue-400" />
-                    <span className="text-gray-300">ahmedfakriy010230@gmail.com
-</span>
+                    <span className="text-gray-300">ahmedfakriy010230@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-center md:justify-start space-x-4 space-x-reverse pt-4">
                     <a

@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) =
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 مرحباً بك في منصة DTU
               </h1>
-              <p className="text-sm text-gray-600 font-medium">المنصة التعليمية المتقدمة</p>
+              <p className="text-sm text-gray-600 font-medium">هاذه المنصه ليس لها علاقه ب الجامعه بل تهدف  لمساعد الطلاب  فقط</p>
             </div>
           </Link>
 
@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) =
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="البحث في المواد والأقسام..."
+                placeholder=" البحث / غير متاح هاذه الميزه الان..."
                 className="w-full pr-12 pl-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-right"
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Layout/Header';
 import { Hero } from './components/Home/Hero';
@@ -7,18 +7,24 @@ import { SearchResults } from './components/Layout/SearchResults';
 import { DepartmentView } from './components/Department/DepartmentView';
 import { TermView } from './components/Term/TermView';
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
+import { useSearch } from './hooks/useSearch';
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const { searchQuery, setSearchQuery, searchResults } = useSearch();
 
   const HomePage = () => (
     <>
       {searchQuery.trim() ? (
-        <SearchResults searchQuery={searchQuery} />
+        <SearchResults results={searchResults} />
       ) : (
         <>
-          <Hero />
-          <DepartmentGrid />
+          <section id="hero">
+            <Hero />
+          </section>
+
+          <section id="departments">
+            <DepartmentGrid />
+          </section>
         </>
       )}
     </>
@@ -27,7 +33,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        <Header 
+        <Header
           onSearchChange={setSearchQuery}
           searchQuery={searchQuery}
         />
@@ -57,14 +63,15 @@ function App() {
                 </p>
               </div>
 
-              {/* Quick Links */}
+              {/* روابط سريعة */}
               <div className="text-center">
                 <h4 className="text-xl font-bold mb-6">روابط سريعة</h4>
                 <div className="space-y-3">
-                  <a href="#" className="block text-gray-300 hover:text-white transition-colors">الأقسام الدراسية</a>
-                  <a href="#" className="block text-gray-300 hover:text-white transition-colors">الإنجازات</a>
-                  <a href="#" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
-                  <a href="#" className="block text-gray-300 hover:text-white transition-colors">عن المنصة</a>
+                  <a href="/" className="block text-gray-300 hover:text-white transition-colors">الرئيسية</a>
+                  <a href="/#departments" className="block text-gray-300 hover:text-white transition-colors">الأقسام الدراسية</a>
+                  <a href="/#achievements" className="block text-gray-300 hover:text-white transition-colors">الإنجازات</a>
+                  <a href="/#contact" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
+                  <a href="/#about" className="block text-gray-300 hover:text-white transition-colors">عن المنصة</a>
                 </div>
               </div>
 

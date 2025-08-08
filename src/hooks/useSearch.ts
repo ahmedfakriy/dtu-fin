@@ -11,20 +11,18 @@ interface SearchResult {
 }
 
 export const useSearch = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
-  // ⚙️ دالة لتوحيد النصوص قبل المقارنة
   const normalize = (text: string) =>
-    text.toLowerCase().trim().normalize('NFKC');
+    text?.toLowerCase().trim().normalize('NFKC');
 
   const searchResults = useMemo(() => {
-    if (!searchQuery.trim()) return [];
+    if (!searchQuery?.trim()) return [];
 
     const results: SearchResult[] = [];
     const query = normalize(searchQuery);
 
     departments.forEach(dept => {
-      // 🔍 البحث في بيانات القسم
       if (
         normalize(dept.name).includes(query) ||
         normalize(dept.nameAr).includes(query) ||
@@ -37,7 +35,6 @@ export const useSearch = () => {
         });
       }
 
-      // 🔍 البحث في المواد الدراسية داخل القسم
       dept.semesters.forEach(semester => {
         semester.terms.forEach(term => {
           term.subjects.forEach(subject => {
@@ -58,7 +55,7 @@ export const useSearch = () => {
       });
     });
 
-    return results.slice(0, 20); // عرض أول 20 نتيجة فقط
+    return results.slice(0, 20);
   }, [searchQuery]);
 
   return {

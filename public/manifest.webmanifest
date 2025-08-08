@@ -1,13 +1,13 @@
 {
   "name": "DTU Finch",
   "short_name": "DTU",
+  "id": "/",
   "start_url": ".",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
-  "description": "تطبيق DTU Finch يساعدك على تنظيم مواعيدك بسهولة.",
-  "id": "/",
+  "description": "تطبيق DTU Finch لمساعدة الطلاب في تنظيم الدراسة والمهام اليومية.",
   "icons": [
     {
       "src": "/icons/icon-192.png",
@@ -18,13 +18,6 @@
       "src": "/icons/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/home.png",
-      "sizes": "1280x720",
-      "type": "image/png"
     }
   ],
   "launch_handler": {

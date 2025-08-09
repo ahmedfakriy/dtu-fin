@@ -2,9 +2,8 @@
   "name": "DTU Finch",
   "short_name": "DTU",
   "id": "/",
-  "start_url": ".",
+  "start_url": "/?source=pwa",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
   "description": "تطبيق DTU Finch لمساعدة الطلاب في تنظيم الدراسة والمهام اليومية.",
@@ -19,8 +18,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  }
+  ]
 }

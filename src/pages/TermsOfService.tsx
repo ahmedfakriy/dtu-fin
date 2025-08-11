@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TermsOfService() {
+export default function TermsOfService() {
   return (
     <main style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
       <h1>شروط الاستخدام</h1>

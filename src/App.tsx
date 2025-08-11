@@ -10,9 +10,9 @@ import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
 import { useSearch } from './hooks/useSearch';
 
 // الصفحات الجديدة
+import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import Terms from './pages/Terms';
-import Contact from './pages/Contact';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   const { searchQuery, setSearchQuery, searchResults } = useSearch();
@@ -52,9 +52,9 @@ function App() {
               element={<TermView />} 
             />
             {/* الصفحات الجديدة */}
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
         </main>
 
@@ -78,9 +78,9 @@ function App() {
                 <div className="space-y-3">
                   <a href="/" className="block text-gray-300 hover:text-white transition-colors">الرئيسية</a>
                   <a href="/#departments" className="block text-gray-300 hover:text-white transition-colors">الأقسام الدراسية</a>
-                  <a href="/privacy-policy" className="block text-gray-300 hover:text-white transition-colors">سياسة الخصوصية</a>
-                  <a href="/terms" className="block text-gray-300 hover:text-white transition-colors">الشروط والأحكام</a>
                   <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
+                  <a href="/privacy" className="block text-gray-300 hover:text-white transition-colors">سياسة الخصوصية</a>
+                  <a href="/terms" className="block text-gray-300 hover:text-white transition-colors">شروط الاستخدام</a>
                 </div>
               </div>
 

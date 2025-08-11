@@ -9,11 +9,6 @@ import { TermView } from './components/Term/TermView';
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
 import { useSearch } from './hooks/useSearch';
 
-// استيراد الصفحات الجديدة
-import Contact from './pages/Contact';
-import About from './pages/About';
-import Achievements from './pages/Achievements';
-
 function App() {
   const { searchQuery, setSearchQuery, searchResults } = useSearch();
 
@@ -23,11 +18,11 @@ function App() {
         <SearchResults results={searchResults} />
       ) : (
         <>
-          <section id="hero" className="pt-8">
+          <section id="hero">
             <Hero />
           </section>
 
-          <section id="departments" className="pt-16">
+          <section id="departments">
             <DepartmentGrid />
           </section>
         </>
@@ -38,29 +33,24 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        <Header onSearchChange={setSearchQuery} searchQuery={searchQuery} />
+        <Header
+          onSearchChange={setSearchQuery}
+          searchQuery={searchQuery}
+        />
 
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/department/:departmentId" element={<DepartmentView />} />
-            <Route
-              path="/department/:departmentId/semester/:semesterId/term/:termId"
-              element={<TermView />}
+            <Route 
+              path="/department/:departmentId/semester/:semesterId/term/:termId" 
+              element={<TermView />} 
             />
-
-            {/* صفحات جديدة */}
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/achievements" element={<Achievements />} />
           </Routes>
         </main>
 
         {/* Footer */}
-        <footer
-          className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16"
-          dir="rtl"
-        >
+        <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16" dir="rtl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Logo and Description */}
@@ -77,33 +67,11 @@ function App() {
               <div className="text-center">
                 <h4 className="text-xl font-bold mb-6">روابط سريعة</h4>
                 <div className="space-y-3">
-                  <a href="/" className="block text-gray-300 hover:text-white transition-colors">
-                    الرئيسية
-                  </a>
-                  <a
-                    href="/#departments"
-                    className="block text-gray-300 hover:text-white transition-colors"
-                  >
-                    الأقسام الدراسية
-                  </a>
-                  <a
-                    href="/achievements"
-                    className="block text-gray-300 hover:text-white transition-colors"
-                  >
-                    الإنجازات
-                  </a>
-                  <a
-                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors"
-                  >
-                    اتصل بنا
-                  </a>
-                  <a
-                    href="/about"
-                    className="block text-gray-300 hover:text-white transition-colors"
-                  >
-                    عن المنصة
-                  </a>
+                  <a href="/" className="block text-gray-300 hover:text-white transition-colors">الرئيسية</a>
+                  <a href="/#departments" className="block text-gray-300 hover:text-white transition-colors">الأقسام الدراسية</a>
+                  <a href="/#achievements" className="block text-gray-300 hover:text-white transition-colors">الإنجازات</a>
+                  <a href="/#contact" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
+                  <a href="/#about" className="block text-gray-300 hover:text-white transition-colors">عن المنصة</a>
                 </div>
               </div>
 
@@ -142,8 +110,12 @@ function App() {
             </div>
 
             <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-              <p className="text-gray-400 text-lg">© 2024 منصة DTU التعليمية. جميع الحقوق محفوظة.</p>
-              <p className="text-gray-500 text-sm mt-2">تمكين الجيل القادم من المهنيين التقنيين</p>
+              <p className="text-gray-400 text-lg">
+                © 2024 منصة DTU التعليمية. جميع الحقوق محفوظة.
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                تمكين الجيل القادم من المهنيين التقنيين
+              </p>
             </div>
           </div>
         </footer>

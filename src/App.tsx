@@ -9,11 +9,6 @@ import { TermView } from './components/Term/TermView';
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
 import { useSearch } from './hooks/useSearch';
 
-// الصفحات الجديدة
-import ContactUs from './pages/ContactUs';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
-
 function App() {
   const { searchQuery, setSearchQuery, searchResults } = useSearch();
 
@@ -51,10 +46,6 @@ function App() {
               path="/department/:departmentId/semester/:semesterId/term/:termId" 
               element={<TermView />} 
             />
-            {/* الصفحات الجديدة */}
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
         </main>
 
@@ -78,9 +69,9 @@ function App() {
                 <div className="space-y-3">
                   <a href="/" className="block text-gray-300 hover:text-white transition-colors">الرئيسية</a>
                   <a href="/#departments" className="block text-gray-300 hover:text-white transition-colors">الأقسام الدراسية</a>
-                  <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
-                  <a href="/privacy" className="block text-gray-300 hover:text-white transition-colors">سياسة الخصوصية</a>
-                  <a href="/terms" className="block text-gray-300 hover:text-white transition-colors">شروط الاستخدام</a>
+                  <a href="/#achievements" className="block text-gray-300 hover:text-white transition-colors">الإنجازات</a>
+                  <a href="/#contact" className="block text-gray-300 hover:text-white transition-colors">اتصل بنا</a>
+                  <a href="/#about" className="block text-gray-300 hover:text-white transition-colors">عن المنصة</a>
                 </div>
               </div>
 
@@ -134,3 +125,5 @@ function App() {
 }
 
 export default App;
+
+

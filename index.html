@@ -24,10 +24,12 @@
   <body>
     <div id="root"></div>
     
-    <!-- Main JS -->
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- لا تضف هنا ملف TSX أو ملفات المصدر مباشرة -->
+    <!-- هذا السكريبت يتم إنشاؤه أوتوماتيكياً عند البناء -->
+    <!-- مثال على ملف البناء من Vite: -->
+    <!-- <script type="module" src="/assets/index-xxxxxxxx.js"></script> -->
 
-    <!-- Register Service Worker -->
+    <!-- تسجيل Service Worker -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

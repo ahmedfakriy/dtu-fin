@@ -143,16 +143,13 @@ export const departments: DepartmentData[] = [
             name: 'الترم الأول',
             nameAr: 'الترم الأول',
             subjects: [
-              { id: 'mech-s4-t1-1', name: 'أنظمة الإنتاج الذكية', nameAr: 'أنظمة الإنتاج الذكية', driveLink: 'https://drive.google.com/drive/folders/7abc123' },
-              { id: 'mech-s4-t1-2', name: 'التحكم الأمثل', nameAr: 'التحكم الأمثل', driveLink: 'https://drive.google.com/drive/folders/7def456' },
-              { id: 'mech-s4-t1-3', name: 'الشبكات العصبية', nameAr: 'الشبكات العصبية', driveLink: 'https://drive.google.com/drive/folders/7ghi789' },
-              { id: 'mech-s4-t1-4', name: 'التصميم المتقدم', nameAr: 'التصميم المتقدم', driveLink: 'https://drive.google.com/drive/folders/7jkl012' },
-              { id: 'mech-s4-t1-5', name: 'إنترنت الأشياء', nameAr: 'إنترنت الأشياء', driveLink: 'https://drive.google.com/drive/folders/7mno345' },
-              { id: 'mech-s4-t1-6', name: 'تطبيقات الهاتف المحمول', nameAr: 'تطبيقات الهاتف المحمول', driveLink: 'https://drive.google.com/drive/folders/7pqr678' },
-              { id: 'mech-s4-t1-7', name: 'الأمن السيبراني', nameAr: 'الأمن السيبراني', driveLink: 'https://drive.google.com/drive/folders/7stu901' },
-              { id: 'mech-s4-t1-8', name: 'مشروع التخرج 2', nameAr: 'مشروع التخرج 2', driveLink: 'https://drive.google.com/drive/folders/7vwx234' },
-              { id: 'mech-s4-t1-9', name: 'الصناعة 4.0', nameAr: 'الصناعة 4.0', driveLink: 'https://drive.google.com/drive/folders/7yz567' },
-              { id: 'mech-s4-t1-10', name: 'ريادة الأعمال', nameAr: 'ريادة الأعمال', driveLink: 'https://drive.google.com/drive/folders/7abc890' }
+             { id: 'mech-s4-t1-1', name: 'الأنظمة الديناميكية', nameAr: 'الأنظمة الديناميكية', driveLink: 'https://drive.google.com/drive/folders/xxx1' },
+             { id: 'mech-s4-t1-2', name: 'Embedded Systems', nameAr: 'Embedded Systems', driveLink: 'https://drive.google.com/drive/folders/xxx2' },
+             { id: 'mech-s4-t1-3', name: 'مهارات توظيف', nameAr: 'مهارات توظيف', driveLink: 'https://drive.google.com/drive/folders/xxx3' },
+             { id: 'mech-s4-t1-4', name: 'معالجة الإشارات', nameAr: 'معالجة الإشارات', driveLink: 'https://drive.google.com/drive/folders/xxx4' },
+             { id: 'mech-s4-t1-5', name: 'ضبط جودة', nameAr: 'ضبط جودة', driveLink: 'https://drive.google.com/drive/folders/xxx5' },
+             { id: 'mech-s4-t1-6', name: 'HMI', nameAr: 'HMI', driveLink: 'https://drive.google.com/drive/folders/xxx6' },
+
             ]
           },
           {

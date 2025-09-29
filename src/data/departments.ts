@@ -61,16 +61,12 @@ export const departments: DepartmentData[] = [
             name: 'الترم الأول',
             nameAr: 'الترم الأول',
             subjects: [
-              { id: 'mech-s2-t1-1', name: 'MATLAB ', nameAr: 'MATLAB ', driveLink: 'https://drive.google.com/drive/folders/1vgIwcJeb259XRkJ6jzUj6ikWIdB5j4Hd?usp=drive_link' },
-              { id: 'mech-s2-t1-2', name: 'plc', nameAr: 'plc', driveLink: 'https://drive.google.com/drive/folders/1F2nrcLCKbu3aIrSS58veDn1PYEQSvfdz?usp=drive_link' },
-              { id: 'mech-s2-t1-3', name: 'Selection of materials', nameAr: 'Selection of materials', driveLink: 'https://drive.google.com/drive/folders/1EWR2_pDwlrIscFxysqCjQpJU4qxh3eZx?usp=drive_link' },
-              { id: 'mech-s2-t1-4', name: 'تحكم بل الحاسب', nameAr: 'تحكم بل الحاسب', driveLink: 'https://drive.google.com/drive/folders/1uDWAgIWgOhqyw0_EiE0Xd6A9N7memSJQ?usp=drive_link' },
-              { id: 'mech-s2-t1-5', name: 'هيدروليك', nameAr: 'هيدروليك', driveLink: 'https://drive.google.com/drive/folders/1JJq2bJ2cjNHnEG3DwelazOxegUtVMGDh?usp=drive_link' },
-              { id: 'mech-s2-t1-6', name: 'البرمجة المتقدمة', nameAr: 'البرمجة المتقدمة', driveLink: 'https://drive.google.com/drive/folders/3pqr678' },
-              { id: 'mech-s2-t1-7', name: 'نظرية التحكم', nameAr: 'نظرية التحكم', driveLink: 'https://drive.google.com/drive/folders/3stu901' },
-              { id: 'mech-s2-t1-8', name: 'المختبرات العملية', nameAr: 'المختبرات العملية', driveLink: 'https://drive.google.com/drive/folders/3vwx234' },
-              { id: 'mech-s2-t1-9', name: 'الاهتزازات الميكانيكية', nameAr: 'الاهتزازات الميكانيكية', driveLink: 'https://drive.google.com/drive/folders/3yz567' },
-              { id: 'mech-s2-t1-10', name: 'أنظمة القياس', nameAr: 'أنظمة القياس', driveLink: 'https://drive.google.com/drive/folders/3abc890' }
+              { id: 'mech-s2-t1-1', name: 'PLC', nameAr: 'PLC', driveLink: 'https://drive.google.com/drive/folders/xxx1' },
+{ id: 'mech-s2-t1-2', name: 'تكنولوجيا الهيدروليك', nameAr: 'تكنولوجيا الهيدروليك', driveLink: 'https://drive.google.com/drive/folders/xxx2' },
+{ id: 'mech-s2-t1-3', name: 'برمجة لتطبيقات الميكاترونكس', nameAr: 'برمجة لتطبيقات الميكاترونكس', driveLink: 'https://drive.google.com/drive/folders/xxx3' },
+{ id: 'mech-s2-t1-4', name: 'إختيار المواد', nameAr: 'إختيار المواد', driveLink: 'https://drive.google.com/drive/folders/xxx4' },
+{ id: 'mech-s2-t1-5', name: 'التحكم بالحاسبات', nameAr: 'التحكم بالحاسبات', driveLink: 'https://drive.google.com/drive/folders/xxx5' },
+
             ]
           },
           {
@@ -102,16 +98,12 @@ export const departments: DepartmentData[] = [
             name: 'الترم الأول',
             nameAr: 'الترم الأول',
             subjects: [
-              { id: 'mech-s3-t1-1', name: ' power', nameAr: 'power', driveLink: 'https://drive.google.com/drive/folders/1nPLd2jGry5nyYZJg7YM4HEli8cYbJ3W9?usp=sharing' },
-              { id: 'mech-s3-t1-2', name: 'أنظمة التحكم المتقدمة', nameAr: 'أنظمة التحكم المتقدمة', driveLink: 'https://drive.google.com/drive/folders/5def456' },
-              { id: 'mech-s3-t1-3', name: 'الذكاء الاصطناعي', nameAr: 'الذكاء الاصطناعي', driveLink: 'https://drive.google.com/drive/folders/5ghi789' },
-              { id: 'mech-s3-t1-4', name: 'التصميم بالحاسوب', nameAr: 'التصميم بالحاسوب', driveLink: 'https://drive.google.com/drive/folders/5jkl012' },
-              { id: 'mech-s3-t1-5', name: 'أنظمة الاتصالات', nameAr: 'أنظمة الاتصالات', driveLink: 'https://drive.google.com/drive/folders/5mno345' },
-              { id: 'mech-s3-t1-6', name: 'البرمجة الشيئية', nameAr: 'البرمجة الشيئية', driveLink: 'https://drive.google.com/drive/folders/5pqr678' },
-              { id: 'mech-s3-t1-7', name: 'معالجة الإشارات', nameAr: 'معالجة الإشارات', driveLink: 'https://drive.google.com/drive/folders/5stu901' },
-              { id: 'mech-s3-t1-8', name: 'مشروع متقدم', nameAr: 'مشروع متقدم', driveLink: 'https://drive.google.com/drive/folders/5vwx234' },
-              { id: 'mech-s3-t1-9', name: 'الأتمتة الصناعية', nameAr: 'الأتمتة الصناعية', driveLink: 'https://drive.google.com/drive/folders/5yz567' },
-              { id: 'mech-s3-t1-10', name: 'الرؤية الحاسوبية', nameAr: 'الرؤية الحاسوبية', driveLink: 'https://drive.google.com/drive/folders/5abc890' }
+              { id: 'mech-s3-t1-1', name: 'PLC', nameAr: 'PLC', driveLink: 'https://drive.google.com/drive/folders/xxx1' },
+              { id: 'mech-s3-t1-2', name: 'التحكم بالحاسبات', nameAr: 'التحكم بالحاسبات', driveLink: 'https://drive.google.com/drive/folders/xxx2' },
+              { id: 'mech-s3-t1-3', name: 'برمجة لتطبيقات الميكاترونكس', nameAr: 'برمجة لتطبيقات الميكاترونكس', driveLink: 'https://drive.google.com/drive/folders/xxx3' },
+              { id: 'mech-s3-t1-4', name: 'إختيار المواد', nameAr: 'إختيار المواد', driveLink: 'https://drive.google.com/drive/folders/xxx4' },
+              { id: 'mech-s3-t1-5', name: 'تكنولوجيا الهيدروليك', nameAr: 'تكنولوجيا الهيدروليك', driveLink: 'https://drive.google.com/drive/folders/xxx5' },
+
             ]
           },
           {
